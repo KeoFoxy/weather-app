@@ -1,13 +1,15 @@
 {
   "scripts": {
     "start": "snowpack dev",
+    "sass": "sass --watch ./src/index.scss ./public/index.css",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "prettier --check \"src/**/*.{ts,js}\""
   },
   "dependencies": {
-    "canvas-confetti": "^1.2.0"
+    "canvas-confetti": "^1.2.0",
+    "chart.js": "^4.2.1"
   },
   "devDependencies": {
     "@snowpack/plugin-sass": "^1.4.0",
