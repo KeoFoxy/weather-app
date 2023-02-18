@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
-    <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
-  </head>
-  <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
-    <!--
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Web site created using create-snowpack-app"
+        />
+        <link rel="stylesheet" type="text/css" href="/index.css" />
+        <title>Weather App</title>
+    </head>
+    <body>
+        <div id="weather-app">
+            <div>
+                <input type="text" id="city-input" placeholder="Tokyo" />
+                <button id="search-button">Search</button>
+            </div>
+            <div id="container">
+                <div id="left-side"></div>
+                <div id="weather-data">
+                    <p id="city"></p>
+                    <p id="date"></p>
+                    <div id="iconTemp">
+                        <img src="" alt="" id="weatherImg" />
+                        <p id="temperature"></p>
+                    </div>
+                    <div id="feelType">
+                        <p id="weathertype"></p>
+                        <p id="feelsLike"></p>
+                    </div>
+                    <div id="detailsContainer">
+                        <div>
+                            Humidity
+                            <p id="humidity"></p>
+                        </div>
+                        <div>
+                            Windspeed:
+                            <p id="windspeed"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-side">
+                    <canvas id="chart"></canvas>
+                    <div id="tabs">
+                        <button class="tab" id="tab-1"></button>
+                        <button class="tab" id="tab-2"></button>
+                        <button class="tab" id="tab-3"></button>
+                        <button class="tab" id="tab-4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="/dist/index.js"></script>
+        <script type="module" src="/dist/api.js"></script>
+        <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -22,6 +64,5 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    --></body>
 </html>
