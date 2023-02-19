@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #a2cefa, #1ea1e8);
+  background: linear-gradient(to bottom, #C6E2FF, #d89aa8);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,10 +18,12 @@ body {
   background-color: #d0e1f7;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 10px 0px rgba(255, 255, 255, 0.5);
 }
 
-#left-side, #right-side {
+#left-side,
+#right-side {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +31,8 @@ body {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 10px 0px rgba(255, 255, 255, 0.5);
   width: 50%;
   padding: 20px;
   height: 380px;
@@ -40,13 +43,15 @@ body {
   margin-right: 30px;
 }
 
+
 #city-input {
   width: 33%;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #f2f2f2;
   border: none;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 10px 0px rgba(255, 255, 255, 0.5);
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
@@ -56,18 +61,19 @@ body {
 #search-button {
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: #f8c4cb;
+  background-color: #17bbf2;
   border: none;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 10px 0px rgba(255, 255, 255, 0.5);
   color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 
 #search-button:hover {
-  background-color: #C6E2FF;
+  background-color: #b7d8f8;
 }
 
 #chart {
@@ -91,15 +97,16 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.tab.active {
+.tab:hover {
+  background-color: #17bbf2;
   color: white;
-  background: #185a9d;
 }
 
-.tab:hover {
-  background-color: #185a9d;
+.tab.active {
   color: white;
+  background: #17bbf2;
 }
+
 
 #iconTemp {
   display: flex;
@@ -112,7 +119,7 @@ body {
 #temperature {
   font-size: 32px;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffff;
 }
 
 #date {
@@ -125,6 +132,7 @@ body {
   color: #868585;
   margin-top: -40px;
   color: #ffff;
+
 }
 
 #city {
@@ -134,6 +142,7 @@ body {
   font-weight: bold;
   margin-top: -1rem;
   color: #ffff;
+
 }
 
 .weatherImg {
@@ -145,19 +154,20 @@ body {
 .feelType {
   color: #ffff;
   margin-top: -2rem;
-  margin-bottom: -2rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 #weathertype {
-  font-size: 18px;
-  margin-top: -20px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 #feelsLike {
   font-size: 18px;
   margin-top: -20px;
 }
+
 
 #detailsContainer {
   display: flex;
@@ -171,8 +181,53 @@ body {
   text-align: center;
 }
 
-#humidity, #windspeed {
+#humidity #windspeed {
+
   font-size: 20px;
   margin-top: 16px;
   margin-right: 2rem;
+}
+
+
+@media only screen and (max-width: 900px) {
+  #weather-app {
+    width: 100%;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  #left-side,
+  #right-side {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+
+  #city-input {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #container {
+    flex-direction: column;
+  }
+
+  #city-input {
+    width: 40%;
+  }
+
+  #city {
+    font-size: 32px;
+  }
+
+  #date {
+    font-size: 14px;
+    margin-top: -30px;
+  }
+
 }
